@@ -29,7 +29,7 @@ deactivate
 pip install scipy
 ```
 
-## To compile C++ code:
+## To compile C++ code (python virtualenv MUST be active when compiling):
 ```
 mkdir build
 cd build

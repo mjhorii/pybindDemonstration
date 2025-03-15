@@ -4,6 +4,10 @@ project(CropDisease)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 
+#Only search for python in the active virtual environment
+set(Python_FIND_VIRTUALENV "ONLY")
+find_package (Python COMPONENTS Interpreter Development)
+
 # Explicitly use the Python from the local virtual environment
 set(Python3_EXECUTABLE "${CMAKE_SOURCE_DIR}/pybindDemoEnv/bin/python")
 message(STATUS "Using Python executable: ${Python3_EXECUTABLE}")
